@@ -50,12 +50,17 @@
     }
 
     a {
-      color: #00b4d8;   /* Link color preserved */
+      color: #00b4d8;
       text-decoration: none;
     }
 
     a:hover {
       text-decoration: underline;
+    }
+
+    .skills, .certs, .links {
+      list-style: none;
+      padding: 0;
     }
 
     .skills li, .certs li {
@@ -65,24 +70,17 @@
       border-radius: 5px;
     }
 
-    .project-card {
-      background: #1b263b;
-      padding: 25px;
-      border-radius: 6px;
-      margin-top: 30px;
-    }
-
-    .project-card h3 {
-      color: #7bdcff;
-    }
-
     footer {
       text-align: center;
       padding: 30px 10px;
       background: #1b263b;
       font-size: 0.9rem;
       color: #aaa;
-      margin-top: 40px;
+    }
+
+    .links a {
+      margin: 0 10px;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -106,49 +104,6 @@
       I specialize in building intelligent, secure, and resilient multi-cloud ecosystems that
       accelerate insights and deliver measurable impact.
     </p>
-  </section>
-
-  <!-- FEATURED PROJECT -->
-  <section id="projects">
-    <h2>Featured Project</h2>
-
-    <div class="project-card">
-      <h3>📸 Active Learning Pipeline for Automated Image Annotation (AWS)</h3>
-      <p>
-        I built an end-to-end active learning system that automates annotation of in-cabin automotive 
-        images for Veoneer. The pipeline integrates ML-based auto-labeling, confidence-driven sampling, 
-        human-in-the-loop corrections, and continuous retraining to dramatically reduce labeling cost 
-        and accelerate dataset delivery for ADAS and in-cabin sensing workloads.
-      </p>
-
-      <!-- Embedded Architecture Diagram -->
-      <div style="margin: 25px 0; text-align:center;">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAoAAAAGQCAYAAADTbSBAAAAACXBIWXMAAAsTAAALEwEAmpwYAAAF
-... BASE64 TRUNCATED FOR BREVITY ...
-"
-             alt="Active Learning Architecture Diagram"
-             style="max-width:100%; border-radius:6px;">
-        <p style="font-size:0.9rem; color:#ccc; margin-top:8px;">
-          Architecture of the AWS-based active learning pipeline.
-        </p>
-      </div>
-
-      <h3>What I Built</h3>
-      <ul>
-        <li>Designed a scalable ML system using S3, Rekognition, YOLOv8 Pose, Lambda, Ground Truth, and SageMaker.</li>
-        <li>Implemented a confidence-based judgment engine to route low-quality predictions to human labeling.</li>
-        <li>Created CI/CD retraining pipelines using CodePipeline & CodeBuild.</li>
-        <li>Developed dual-model logic for visibility classification and pose annotation.</li>
-        <li>Delivered reusable AWS CDK stacks for computer vision annotation workloads.</li>
-      </ul>
-
-      <h3>Impact</h3>
-      <ul>
-        <li>Reduced annotation cost by 90–99%.</li>
-        <li>Cut dataset turnaround from weeks → hours.</li>
-        <li>Achieved mAP@50: 94.9% (head) and 98.4% (keypoints).</li>
-      </ul>
-    </div>
   </section>
 
   <section id="skills">
@@ -179,7 +134,7 @@
       I enjoy collaborating on cutting-edge AI research and enterprise-scale innovation.
       Feel free to reach out for partnerships, discussions, or mentorship.
     </p>
-    <p>
+    <p class="links">
       🔗 <a href="https://www.linkedin.com/in/jdheer" target="_blank">LinkedIn</a> |
       💻 <a href="https://github.com/jatinf" target="_blank">GitHub</a>
     </p>
@@ -188,6 +143,5 @@
   <footer>
     © 2025 Jatinder Singh · Principal Architect & AI Research Scientist · Built with ❤️ using GitHub Pages
   </footer>
-
 </body>
 </html>
